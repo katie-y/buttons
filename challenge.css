@@ -1,0 +1,196 @@
+body {background-image: url(space.png);}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+}
+
+.cnlogo {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    font-size: 100px;
+    border-radius: 30px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bracket {
+    color: #F5B32F;
+
+}
+
+.c, .n {
+    color: #274E9B;
+}
+
+.cnlogo:hover .c {
+    color: white;
+}
+
+.cnlogo:hover .n {
+    color: white;
+}
+
+.cnlogo:hover {
+    background-color: #274E9B;
+    transform: rotate(360deg);
+    transition: all 4s;
+}
+
+.twitter {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    animation-name: sideways;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes sideways {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-70px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.twitter:hover {
+    animation-play-state: paused;
+}
+
+.facebook {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    color: white;
+    font-size: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #3C5A98;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px black;
+}
+
+.facebook:hover {
+    border-radius: 50px;
+}
+
+.insta {
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+    background-color: purple;
+    padding:20px;
+    border-radius: 50%;
+}
+
+.insta:hover {
+    transform: scale(2);
+    animation-name: changeCol;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes changeCol {
+    0% {
+        background-color: purple;
+    }
+    25% {
+        background-color: green;
+    }
+    50% {
+        background-color: yellow;
+    }
+    100% {background-color: turquoise;}
+}
+
+
+@keyframes spin{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+
+}
+
+.planetOne {
+    animation-name: spin;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    left: 5%;
+}
+
+@keyframes rightToLeft {
+    0% {
+        transform: translate(-100px);
+    }
+    50% {
+        transform: translate(-700px,-700px);
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+.planetTwo {
+    animation-name: rightToLeft;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    right: 0%;
+}
+
+
+.site {
+    position: absolute;
+    bottom: 20%;
+    right: 25%;
+    color: #F5B32F;
+    font-size: 40px;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid #274e9b;
+    font-family: Arial, Helvetica, sans-serif;
+    animation-name: skew;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.site:hover {
+    color: #274E9B;
+    border: 5px dashed #F5B32F;
+
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(0);
+    }
+    25% {
+        transform: skew(25deg);
+    }
+    50% {
+        transform: skew(-25deg);
+    }
+    100% {
+        transform: skew(0);
+    }
+}
+
